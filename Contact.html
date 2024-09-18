@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mark Joel Arias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Mark Joel Arias</h1>
+        <p>Graphic Designer</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Project.html">Projects</a></li>
+                <li><img src="white.png" alt="logo" class="logo"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p>If you’d like to get in touch, feel free to <a href="mailto:mark.joel.arias@example.com">email me</a>.</p>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        var lastScrollTop = 0;
+        var navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = "-200px"; // Hide navbar
+            } else {
+                navbar.style.top = "0"; // Show navbar
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Mark Joel Arias</p>
+    </footer>
+</body>
+</html>

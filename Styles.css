@@ -1,0 +1,238 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent; /* Initially transparent background */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+header {
+    position: relative;
+    background-image: url('Backg.jpg'); /* Initial background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Lock the background image */
+    height: 100vh; /* Fullscreen header */
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: left; /* Align items to the left */
+    text-align: center; /* Center text within the header */
+    color: #fff;
+    padding: 0.9em 10em;
+    text-align: left; /* Align text to the left */
+    animation: slideIn 1s ease-out;
+}
+
+header.scrolled {
+    opacity: 0;
+}
+
+header h1 {
+    margin: 0;
+    margin-bottom: -0.3em;
+    margin-left: -0.06em;
+    letter-spacing: -0.06em;
+    font-size: 6.5em;
+    animation: fadeInDown 1s ease-out;
+}
+
+header p {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    letter-spacing: -0.03em;
+    animation: fadeInDown 1.2s ease-out;
+}
+
+header nav {
+    margin-top: 0.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    font-size: 1.3em;
+    animation: fadeInDown 1.4s ease-out;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 1em; /* Adjust spacing between nav items */
+}
+
+header nav ul img {
+    position: fixed;
+    height: auto;
+    right: 0px;
+    width: 250px
+}
+
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00d6d6;
+}
+
+#scrollNavbar {
+    position: fixed;
+    top: -100px; /* Initially off-screen */
+    width: 100%;
+    background-color: hsl(192, 100%, 11%);
+    transition: top 0.3s, background-color 0.3s; /* Smooth transitions */
+    z-index: 1000;
+    box-shadow: 0 10px px rgba(0,0,0,0.2); /* Optional: Add a shadow */
+}
+
+#scrollNavbar.active {
+    top: 0; /* Bring the navbar to the top when active */
+}
+
+#scrollNavbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left; /* Align items to the left */
+    padding: 1em 2em; /* Adjust padding as needed */
+}
+
+#scrollNavbar ul li {
+    margin-left: 1em; /* Adjust spacing between nav items */
+}
+
+#scrollNavbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+#scrollNavbar ul li a:hover {
+    color: #00d6d6;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+section h2 {
+    border-bottom: 3px solid #333;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    animation: fadeInLeft 1.4s ease-out;
+}
+
+.project {
+    margin: 1.5em 0;
+    padding: 1em;
+    border-left: 5px solid #333;
+    animation: fadeInUp 1.6s ease-out;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: left;
+    justify-content: left;
+    padding: 1em 0;
+    animation: slideUp 1s ease-out;
+}
+
+footer p {
+    margin: 0;
+    margin-left: 2em;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
